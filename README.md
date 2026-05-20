@@ -1,8 +1,9 @@
 # ffmpeg-kit-spm
 
-Private Swift Package Manager wrapper for locally rebuilt FFmpegKit XCFrameworks.
+Private Swift Package Manager wrapper for FFmpegKit XCFrameworks.
 
-This package distributes FFmpegKit `6.0` binaries rebuilt internally and intended for use in Rosseca projects.
+This package distributes FFmpegKit `6.0` binaries intended for use in Rosseca projects.
+The bundled LGPL build includes VideoToolbox and AudioToolbox encoder support for iOS HLS pipelines on iOS devices, iOS simulators, and Mac Catalyst without enabling GPL-only FFmpeg components.
 
 ## Included XCFrameworks
 
@@ -26,4 +27,5 @@ This package distributes FFmpegKit `6.0` binaries rebuilt internally and intende
 Add the package dependency:
 
 ```swift
-.package(url: "git@github.com:rosseca/ffmpeg-kit-spm.git", exact: "6.0.0")
+.package(url: "git@github.com:rosseca/ffmpeg-kit-spm.git", revision: "<commit-sha>")
+```
